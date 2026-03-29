@@ -1,0 +1,227 @@
+/* page.module.css */
+.main {
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLinks a {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.navLinks a:hover {
+  color: var(--text-primary);
+}
+
+/* Hero Section */
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at bottom right, rgba(157, 78, 221, 0.08) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 1s ease forwards;
+}
+
+.heroTagline {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  animation: fadeUp 1s ease forwards 0.2s;
+  opacity: 0;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  animation: fadeUp 1s ease forwards 0.4s;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Projects */
+.sectionTitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectCard {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255, 0.05);
+  border-radius: 12px;
+  padding: 3rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+}
+
+.cardTeal:hover {
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+.cardPurple:hover {
+  box-shadow: 0 10px 30px rgba(157, 78, 221, 0.1);
+  border-color: rgba(157, 78, 221, 0.3);
+}
+
+.cardHeader {
+  margin-bottom: 2rem;
+}
+
+.cardTag {
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-teal);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tagPurple {
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--accent-purple);
+}
+
+.projectCard h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projectCard p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  min-height: 80px;
+}
+
+.techStack {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.techStack span {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+/* Contact */
+.contactSection {
+  background: linear-gradient(to top, #080808, var(--background));
+}
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  background: var(--surface);
+  padding: 4rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+.contactInfo h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.emailDisplay {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.02);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: 4px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
