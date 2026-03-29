@@ -8,6 +8,16 @@
   --accent-purple: #9d4edd;
 }
 
+[data-theme='light'] {
+  --background: #f8f9fa;
+  --surface: #ffffff;
+  --surface-hover: #f1f3f5;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent-teal: #0d9488;
+  --accent-purple: #6b21a8;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -55,6 +65,7 @@ p { margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.7; }
 .text-purple { color: var(--accent-purple); }
 .text-gradient {
   background: linear-gradient(90deg, var(--accent-teal), var(--accent-purple));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import styles from './page.module.css';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', company: '', brief: '' });
@@ -34,12 +35,13 @@ export default function Home() {
     <main className={styles.main}>
       {/* Navigation */}
       <nav className={styles.navbar}>
-        <div className="container">
+        <div className="container" style={{ width: '100%' }}>
           <div className={styles.navContent}>
             <div className={styles.logo}>Bilal<span className="text-teal">.Hub</span></div>
             <div className={styles.navLinks}>
               <a href="#about">About</a>
-              <a href="#projects">Projects</a>
+              <a href="#casestudies">Case Studies</a>
+              <ThemeToggle />
               <a href="#contact" className="btn">Hire Me</a>
             </div>
           </div>
@@ -53,53 +55,102 @@ export default function Home() {
         </div>
         <div className="container relative">
           <h1 className={styles.heroTitle}>
-            Bilal | Engineering Intelligent <br />
-            <span className="text-gradient">Web Ecosystems.</span>
+            Engineering Intelligent <br />
+            <span className="text-gradient">Web Ecosystems & ML-Driven Growth.</span>
           </h1>
           <p className={styles.heroTagline}>
             Merging 10x Web Performance with Machine Learning Insights. <br />
-            Full-Stack Developer + ML Innovator.
+            High-Ticket Automation Consultant + Full-Stack Innovator.
           </p>
           <div className={styles.heroActions}>
-            <a href="#projects" className="btn">View My Duality</a>
-            <a href="#contact" className="btn btn-purple">Initiate Contact</a>
+            <a href="#casestudies" className="btn">View Architecture</a>
+            <a href="#contact" className="btn btn-purple">Request an Audit</a>
           </div>
         </div>
       </section>
 
-      {/* Projects Showcase */}
-      <section id="projects" className="section">
+      {/* Case Studies Showcase */}
+      <section id="casestudies" className="section">
         <div className="container">
-          <h2 className={styles.sectionTitle}>The Duality of My Craft</h2>
+          <h2 className={styles.sectionTitle}>High-Impact Case Studies</h2>
           
           <div className={styles.projectsGrid}>
-            {/* Web Dev Card */}
-            <div className={`${styles.projectCard} ${styles.cardTeal}`}>
+            
+            {/* Project 1 */}
+            <div className={styles.projectCard}>
               <div className={styles.cardHeader}>
-                <span className={styles.cardTag}>Web Engineering</span>
+                <span className={styles.cardTag}>Machine Intelligence</span>
               </div>
-              <h3>Optimized E-commerce Platform</h3>
-              <p>Next.js & AlloyDB architecture delivering unparalleled speed, scalability, and technical SEO resulting in a 40% conversion uplift.</p>
+              <h3>Smart Bridal Makeup Advisor</h3>
+              <p className={styles.impactMetric}>Impact: Increased personalization efficiency by 40%.</p>
+              <p>An intelligent computer vision and expert logic engine designed to assess facial features and recommend bespoke cosmetic strategies autonomously.</p>
               <div className={styles.techStack}>
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Next.js</span>
+                <span>Computer Vision</span>
+                <span>Python</span>
+                <span>Expert Systems</span>
               </div>
             </div>
 
-            {/* ML Card */}
-            <div className={`${styles.projectCard} ${styles.cardPurple}`}>
+            {/* Project 2 */}
+            <div className={styles.projectCard}>
               <div className={styles.cardHeader}>
-                <span className={`${styles.cardTag} ${styles.tagPurple}`}>Machine Intelligence</span>
+                <span className={`${styles.cardTag} ${styles.tagPurple}`}>Security & Verification</span>
               </div>
-              <h3>Predictive Analytics Dashboard</h3>
-              <p>Python/TensorFlow powered predictive insights interpreting real-time data streams to forecast market trends with 94% model accuracy.</p>
+              <h3>Blockchain Academic Credential Verifier</h3>
+              <p className={styles.impactMetric}>Impact: Reduced verification latency to near-zero.</p>
+              <p>A decentralized, immutable ledger system built to securely issue, store, and instantly verify academic credentials without reliance on central authorities.</p>
               <div className={styles.techStack}>
-                <span>Python</span>
-                <span>PyTorch</span>
-                <span>MLflow</span>
+                <span>Blockchain</span>
+                <span>Smart Contracts</span>
+                <span>Web3.js</span>
               </div>
             </div>
+
+            {/* Project 3 */}
+            <div className={styles.projectCard}>
+              <div className={styles.cardHeader}>
+                <span className={styles.cardTag}>Hardware Integration</span>
+              </div>
+              <h3>Human Detecting System</h3>
+              <p className={styles.impactMetric}>Impact: Enhanced facility security monitoring accuracy.</p>
+              <p>An edge-computing IoT solution utilizing embedded microcontrollers to autonomously detect and classify human presence for highly secure facilities.</p>
+              <div className={styles.techStack}>
+                <span>IoT</span>
+                <span>Microcontrollers</span>
+                <span>C++</span>
+              </div>
+            </div>
+
+            {/* Project 4 */}
+            <div className={styles.projectCard}>
+              <div className={styles.cardHeader}>
+                <span className={`${styles.cardTag} ${styles.tagPurple}`}>Geo-Platform Engineering</span>
+              </div>
+              <h3>Local Job Portal for Kerala</h3>
+              <p className={styles.impactMetric}>Impact: Streamlined district-level hiring funnels.</p>
+              <p>A highly-scalable regional platform employing advanced geolocation and granular district filtering rules to bridge hyper-local talent sets with employers.</p>
+              <div className={styles.techStack}>
+                <span>Next.js</span>
+                <span>Geolocation API</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+
+             {/* Project 5 */}
+             <div className={styles.projectCard}>
+              <div className={styles.cardHeader}>
+                <span className={styles.cardTag}>Connected Automation</span>
+              </div>
+              <h3>Voice Controlled Home Automation</h3>
+              <p className={styles.impactMetric}>Impact: Delivered seamless zero-touch residential ecosystems.</p>
+              <p>A highly integrated home management architecture linking ESP8266 microcontrollers with Amazon Alexa skills for comprehensive end-to-end voice control.</p>
+              <div className={styles.techStack}>
+                <span>ESP8266</span>
+                <span>Alexa Smart Home</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -107,19 +158,24 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className={`section ${styles.contactSection}`}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>The Contact Engine</h2>
+          <h2 className={styles.sectionTitle}>Request an AI Automation Audit</h2>
           <div className={styles.contactWrapper}>
             <div className={styles.contactInfo}>
-              <h3>Let's build intelligence together.</h3>
-              <p>Ready to integrate high-performance development and machine learning into your next product? Send your project brief directly to my core systems.</p>
+              <h3>Let's architect your next breakthrough.</h3>
+              <p>Ready to deploy high-performance engineering and machine intelligence into your enterprise pipeline? Submit your immediate requirements.</p>
+              
+              <div className={styles.microCopy}>
+                ✓ Every inquiry is parsed by a custom ML lead-scoring model and synced to my priority dashboard in &lt;3 seconds.
+              </div>
+
               <p className={styles.emailDisplay}>
-                <span className="text-teal">Email:</span> mhdb8535@gmail.com
+                <span className="text-teal">Direct Override:</span> mhdb8535@gmail.com
               </p>
             </div>
             
             <form className={styles.contactForm} onSubmit={handleSubmit}>
               <div className="form-group">
-                <label className="form-label" htmlFor="name">Name</label>
+                <label className="form-label" htmlFor="name">Executive Name</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -131,7 +187,7 @@ export default function Home() {
                 />
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="company">Company</label>
+                <label className="form-label" htmlFor="company">Enterprise / Organization</label>
                 <input 
                   type="text" 
                   id="company" 
@@ -143,11 +199,11 @@ export default function Home() {
                 />
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="brief">Project Brief</label>
+                <label className="form-label" htmlFor="brief">Core Objective / Architecture Needs</label>
                 <textarea 
                   id="brief" 
                   className="form-textarea" 
-                  placeholder="Describe the core objective of your project..." 
+                  placeholder="Describe the bottleneck or automation objective..." 
                   value={formData.brief}
                   onChange={(e) => setFormData({...formData, brief: e.target.value})}
                   required
@@ -158,11 +214,11 @@ export default function Home() {
                 className={`btn ${styles.submitBtn}`} 
                 disabled={status === 'loading'}
               >
-                {status === 'loading' ? 'Transmitting...' : 'Execute Submission Sequence'}
+                {status === 'loading' ? 'Analyzing & Routing...' : 'Execute Audit Request'}
               </button>
               
-              {status === 'success' && <p style={{marginTop: '1rem', color: 'var(--accent-teal)'}}>Transmission Successful. I will review your core objectives.</p>}
-              {status === 'error' && <p style={{marginTop: '1rem', color: '#ff3333'}}>Error during transmission. Please try again or email directly.</p>}
+              {status === 'success' && <p style={{marginTop: '1rem', color: 'var(--accent-teal)'}}>Transmission Secure. Priority payload routed to dashboard.</p>}
+              {status === 'error' && <p style={{marginTop: '1rem', color: '#ff3333'}}>Anomaly detected during routing. Please retry or bypass via direct email.</p>}
             </form>
           </div>
         </div>
